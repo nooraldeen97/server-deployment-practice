@@ -7,7 +7,7 @@ const supertest=require("supertest");
 const request= supertest(server.app);
 
 describe("test my express API",()=>{
-    it("testing the home route", async()=>{
+    test("testing the home route", async()=>{
         const response= await request.get('/');
         expect(response.text).toEqual("hello from home route");
     })
